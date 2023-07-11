@@ -1,0 +1,18 @@
+.boton-carrito{
+    display: flex;
+    padding: 5px;
+    gap: 5px;
+    color: rgb(37, 72, 185);
+    align-items: center;
+    justify-content: center;
+    margin-left: 15px;
+    width: 4.5rem;
+    border-color: rgb(226, 223, 223);
+    border-radius: 5px;
+}
+
+
+.boton-carrito:hover{
+    color: rgb(37, 38, 39);
+}
+
