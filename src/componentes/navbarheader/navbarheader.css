@@ -7,3 +7,24 @@
 .ms-auto {
     align-items: center;
 }
+
+.logo{
+    width: 3.5rem;
+}
+
+.logo-name{
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: rgb(25, 86, 165);
+    margin-left: 1.2rem;
+    font-family:sans-serif
+}
+
+
+
+.navegador a{
+    color: rgba(26, 26, 26, 0.726);
+    text-decoration:underline;
+    font-size: 1.02rem;
+    margin: 1rem;
+}

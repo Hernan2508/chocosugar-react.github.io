@@ -1,0 +1,7 @@
+.ListGroup{
+    display: flex;
+    gap: 2.5rem;
+    margin: 2rem;
+    width: 100%;
+    flex-wrap: wrap;
+}

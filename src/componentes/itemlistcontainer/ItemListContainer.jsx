@@ -1,6 +1,31 @@
 import "./itemlistcontainer.css";
+import { getProducts, getProductsByCategory } from "../../postres";
+import { useEffect, useState } from "react";
+import ItemList from "../itemlist/ItemList";
+import { useParams } from "react-router-dom";
+
+
 
 const ItemListContainer = (props) => {
+
+  const [productos, setProductos] = useState([])
+
+  const { categoryId } = useParams()
+
+  useEffect(() => {
+    const asyncFunc = categoryId ? getProductsByCategory : getProducts
+
+    asyncFunc( categoryId )
+    .then(response =>{
+        setProductos(response)
+        console.log(productos)
+    })
+    .catch(error =>{
+        console.log(error)
+    })
+  
+  }, [categoryId])
+
   return (
     <div>
       <div className="jumbotron">
@@ -11,6 +36,7 @@ const ItemListContainer = (props) => {
         <p>Te ofrecemos nuestro manual de información para que no te pierdas ninguno de nuestros productos.</p>
         <a className="btn btn-primary btn-lg" href="#" role="button">Buscar más</a>
       </div>
+      <ItemList products = {productos}/>
     </div>
   );
 };

@@ -1,0 +1,42 @@
+.carrito-container{
+    margin: 2rem;
+    
+}
+.carrito-control{
+    display: flex;
+    margin-left: 1rem;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.boton-carrito{
+    display: flex;
+    padding: 5px;
+    gap: 5px;
+    color: rgb(48, 52, 65);
+    align-items: center;
+    justify-content: center;
+    width: 2.5rem;
+    border-color: rgb(226, 226, 226);
+    border-radius: 5px;
+}
+
+
+.boton-carrito:hover{
+    color: rgb(37, 38, 39);
+}
+
+
+.carrito{
+    align-self: center;
+    justify-self: center;
+    font-size: 1.1rem;
+    color: rgb(65, 65, 85);
+}
+
+.carrito span{
+    margin-left: 0.5rem;
+    font-size: 1rem;
+}

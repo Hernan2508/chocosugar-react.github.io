@@ -1,0 +1,12 @@
+.card_container {
+    margin-top: 1rem;
+    padding: 0.55rem;
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+a{
+    color: floralwhite;
+}
