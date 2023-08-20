@@ -2,10 +2,10 @@ import Item from "../item/Item"
 import "./itemlist.css"
 import Container from 'react-bootstrap/Container';
 
-const ItemList = ({products}) => {
+const ItemList = ({productos}) => {
   return (
     <div className="ListGroup">
-        {products.map(prod => <Item key={prod.id} {...prod}/>)}
+        {productos.map((prod) => (<Item key={prod.id} item = {prod}/>))}
     </div>
   )
 }

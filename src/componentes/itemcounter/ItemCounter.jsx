@@ -5,28 +5,31 @@ import { useState } from "react";
 import { Button } from "react-bootstrap";
 
 
-const ItemCounter = () => {
+const ItemCounter = ({stock, initial, onAdd}) => {
 
-  const [count, setCount] = useState(0);
+  const [quantity, setQuantity] = useState(initial);
 
-  const incrementarCarrito = () => {
-    if(count >= 0){
-     setCount(count + 1)
+  const increment = () => {
+    if(quantity < stock){
+      setQuantity(quantity + 1)
     }
   }
 
-  const disminuirCarrito = () => {
-    if(count >= 1){
-    setCount(count - 1)
+  const decrement = () => {
+    if(quantity > 1){
+      setQuantity(quantity - 1)
     }
  }
 
   return (
         <div className= "carrito-container">
             <div className = "carrito-control">
-                <button className="boton-carrito" onClick={disminuirCarrito}><AiOutlineMinusCircle/></button>
-                <h5 className="carrito"><BsFillCartPlusFill/><span>{count}</span></h5>
-                <button className="boton-carrito" onClick={incrementarCarrito}><AiOutlinePlusCircle/></button>
+                <button className="boton-carrito" onClick={decrement}><AiOutlineMinusCircle/></button>
+                <h5 className="carrito"><BsFillCartPlusFill/><span>{quantity}</span></h5>
+                <button className="boton-carrito" onClick={increment}><AiOutlinePlusCircle/></button>
+            </div>
+            <div className="agregar-carrito">
+              <button className="agregar-carrito-boton" onClick={() =>onAdd(quantity)} disabled={!stock}>Agregar al Carrito</button>
             </div>
         </div>
   ) 

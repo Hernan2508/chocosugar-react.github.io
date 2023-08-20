@@ -1,5 +1,7 @@
 .carrito-container{
     margin: 2rem;
+    display: flex;
+    flex-direction: column;
     
 }
 .carrito-control{
@@ -39,4 +41,28 @@
 .carrito span{
     margin-left: 0.5rem;
     font-size: 1rem;
+}
+
+
+.agregar-carrito{
+    display: flex;
+    margin-top: 1.5rem;
+    justify-content: center;
+}
+
+
+.agregar-carrito button{
+    padding: 0.5rem;
+    color: rgb(225, 226, 231);
+    align-items: center;
+    justify-content: center;
+    width: 15rem;
+    border: 0;
+    background: rgb(48, 52, 65);
+    border-radius: 5px;
+}
+
+.agregar-carrito button:hover{
+    border-color: rgb(96, 100, 116);
+    background: rgb(96, 100, 116);
 }

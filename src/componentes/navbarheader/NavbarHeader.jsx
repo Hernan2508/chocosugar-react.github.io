@@ -20,8 +20,8 @@ function NavbarHeader() {
                         <NavLink to={`/category/Tortas`} className={({isActive}) => isActive ? 'ActiveOption' : 'Option'}>Tortas</NavLink>
                         <NavLink to={`/category/Galletas`} className={({isActive}) => isActive ? 'ActiveOption' : 'Option'}>Galletas</NavLink>
                         <NavLink to={`/category/Cupcakes`} className={({isActive}) => isActive ? 'ActiveOption' : 'Option'}>Cupcakes</NavLink>
-                        <NavLink href="#cart">Ir al Carrito</NavLink>
-                        <CartWidget/>
+                        <NavLink to="/cart">Ir al Carrito</NavLink>
+                        <NavLink style={{textDecoration:'none'}} to="/cart"><CartWidget/></NavLink>
                     </Nav>
                     </Navbar.Collapse>
                 </Container>

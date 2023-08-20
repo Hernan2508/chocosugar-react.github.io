@@ -1,30 +1,51 @@
 import "./itemlistcontainer.css";
-import { getProducts, getProductsByCategory } from "../../postres";
-import { useEffect, useState } from "react";
 import ItemList from "../itemlist/ItemList";
+
+import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import { collection, getDocs, query, where } from "firebase/firestore"
+import { db } from "../../services/firebase";
 
 
 
 const ItemListContainer = (props) => {
 
   const [productos, setProductos] = useState([])
+  const [loading, setLoading] = useState(true)
 
   const { categoryId } = useParams()
 
-  useEffect(() => {
-    const asyncFunc = categoryId ? getProductsByCategory : getProducts
+  /* Usamos Firebase */
 
-    asyncFunc( categoryId )
-    .then(response =>{
-        setProductos(response)
-        console.log(productos)
-    })
-    .catch(error =>{
-        console.log(error)
-    })
-  
-  }, [categoryId])
+  useEffect(() =>{
+    setLoading(true)
+
+    const collectionRef = categoryId
+      ? query(collection(db, "postres"), where('categoria', '==', categoryId))
+      : collection(db,'postres')
+      
+    getDocs (collectionRef)
+      .then((response) =>{
+          const productsAdapted = response.docs.map((doc)=>{
+            const data = doc.data()
+            return{id:doc.id,...data}
+            
+          })
+
+          console.log(productsAdapted)
+          // Ordenar los productos adaptados por algún criterio, por ejemplo, por su ID
+          productsAdapted.sort((a, b) => a.id.localeCompare(b.titulo));
+          setProductos(productsAdapted)
+      })
+      .catch(error =>{
+          console.log(error)
+      })
+      .finally(() =>{
+          setLoading(false)
+      })
+
+  }, [categoryId])   
+
 
   return (
     <div>
@@ -36,7 +57,7 @@ const ItemListContainer = (props) => {
         <p>Te ofrecemos nuestro manual de información para que no te pierdas ninguno de nuestros productos.</p>
         <a className="btn btn-primary btn-lg" href="#" role="button">Buscar más</a>
       </div>
-      <ItemList products = {productos}/>
+      <ItemList productos = {productos}/>
     </div>
   );
 };
