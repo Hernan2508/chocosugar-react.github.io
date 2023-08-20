@@ -11,7 +11,7 @@ function NavbarHeader() {
         <div>
              <Navbar expand="lg" className="bg-body-tertiary">
                 <Container className="contenedor-navbar">
-                    <Link to='/'><img className= "logo" src="../src/assets/LogoGeneral.png" alt="Logotipo-Chico-Ingesmart"></img></Link>
+                    <Link to='/'><img className= "logo" src="https://firebasestorage.googleapis.com/v0/b/ecommerce-chocosugar.appspot.com/o/logo%2FLogoGeneral.png?alt=media&token=7574cd4f-cd90-4d09-9cb3-db862dda6c22" alt="Logotipo-Chico-Ingesmart"></img></Link>
                     <Link className= "logo-name" to='/'>ChocoSugar</Link>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
