@@ -1,4 +1,4 @@
-# Pastelería ChocoSugar Ecommerce
+# Pastelería ChocoSugar Ecommerce (importante si desea ver el hosting: https://ecommerce-chocosugar.web.app/)
 
 Bienvenido al proyecto de la Pastelería ChocoSugar Ecommerce, una aplicación web construida con React para vender productos deliciosos como cupcakes, tortas y galletas. ¡Explora nuestros productos y disfruta de los sabores dulces!
 
@@ -47,3 +47,4 @@ Creado por Hernán Ramírez (https://github.com/Hernan2508/chocosugar-react.gith
 
 ## Render en Firebase Hosting
 
+https://ecommerce-chocosugar.web.app/
