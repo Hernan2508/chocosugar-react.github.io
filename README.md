@@ -13,10 +13,13 @@ Bienvenido al proyecto de la Pastelería ChocoSugar Ecommerce, una aplicación w
 ## Instalación
 
 1. Clona este repositorio en tu máquina local:
-2. Navega al directorio del proyecto:
-3. Instala las dependencias utilizando npm:
-4. Crea un archivo `.env` en el directorio raíz y agrega las siguientes variables de entorno:
-5. Inicia la aplicación:
+2. De preferencia entra a Visual Studio Code, abre un terminal ( de preferencia gitbash).
+4. con el comando cd, ubicate en donde quieres colocar el repositorio clonado. Ejemplo cd "D:\CoderHouse\FullStack\03. REACT JS\pruebas_git".
+5. Luego usa el siguien comando git clone https://github.com/Hernan2508/chocosugar-react.github.io.git
+6. Navega al directorio del proyecto a través del comando cd.
+4. Instala las dependencias utilizando npm install.
+5. Luego usa el comando npm run dev.
+6. Inicia la aplicación:
 
 
 ## Tecnologías Utilizadas
